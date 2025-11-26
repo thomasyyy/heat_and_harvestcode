@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 
@@ -8,15 +8,11 @@ df = pd.DataFrame({
     "Cases": [1000, 500, 700]
 })
 
-app = Dash(__name__)
+st.set_page_config(page_title="COVID-19 Dashboard", layout="centered")
+
+st.title("COVID-19 Dashboard")
 
 fig = px.bar(df, x="Country", y="Cases", title="Sample Dashboard")
 
-app.layout = html.Div(children=[
-    html.H1("COVID-19 Dashboard"),
-    dcc.Graph(figure=fig)
-])
+st.plotly_chart(fig, use_container_width=True)
 
-if __name__ == "__main__":
-    # 这里一定要用 app.run，而不是 app.run_server
-    app.run(debug=True)
