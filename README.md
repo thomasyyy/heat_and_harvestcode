@@ -8,11 +8,11 @@ It visualizes **idealized climate fields** (wind streamlines, temperature, preci
 
 ## 📁 Project Structure
 
-├── LICENSE
-├── README.md
-├── app.py             ← main script generating the interactive map
-├── data/              ← optional data folder
-└── requirements.txt   ← dependencies
+├── LICENSE\n
+├── README.md\n
+├── app.py             ← main script generating the interactive map\n
+├── data/              ← optional data folder\n
+└── requirements.txt   ← dependencies\n
 
 ---
 
